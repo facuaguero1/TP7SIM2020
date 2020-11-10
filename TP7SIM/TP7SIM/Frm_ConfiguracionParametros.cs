@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP7SIM.Logica.Helper;
+using System.Globalization;
 
 namespace TP7SIM
 {
@@ -39,14 +40,14 @@ namespace TP7SIM
         internal void btn_ConfirmarParametros_Click(object sender, EventArgs e)
         {
             MySettings.CantMaxClientes = Convert.ToInt32(txtMaxClientes.Text);
-            MySettings.MediaLlegadas = Convert.ToDouble(txtMediaLlegadas.Text);
-            MySettings.TiempoQuitarAlfombras = Convert.ToDouble(txtQA.Text);
-            MySettings.TiempoAreaAspiradoUniformeA = Convert.ToDouble(txtAA_A.Text);
-            MySettings.TiempoAreaAspiradoUniformeB = Convert.ToDouble(txtAA_B.Text);
-            MySettings.TiempoLavadoUniformeA = Convert.ToDouble(txtL_A.Text);
-            MySettings.TiempoLavadoUniformeB = Convert.ToDouble(txtL_B.Text);
-            MySettings.TiempoPonerAlfombras = Convert.ToDouble(txtPA.Text);
-            MySettings.HEcDifSecado = Convert.ToDouble(txtHEcDif.Text);
+            MySettings.MediaLlegadas = Convert.ToDouble(txtMediaLlegadas.Text, CultureInfo.InvariantCulture);
+            MySettings.TiempoQuitarAlfombras = Convert.ToDouble(txtQA.Text, CultureInfo.InvariantCulture);
+            MySettings.Distribuciones.UniformeAspirado.a = Convert.ToDouble(txtAA_A.Text, CultureInfo.InvariantCulture);
+            MySettings.Distribuciones.UniformeAspirado.b = Convert.ToDouble(txtAA_B.Text, CultureInfo.InvariantCulture);
+            MySettings.Distribuciones.UniformeLavado.a = Convert.ToDouble(txtL_A.Text, CultureInfo.InvariantCulture);
+            MySettings.Distribuciones.UniformeLavado.b = Convert.ToDouble(txtL_B.Text, CultureInfo.InvariantCulture);
+            MySettings.TiempoPonerAlfombras = Convert.ToDouble(txtPA.Text, CultureInfo.InvariantCulture);
+            MySettings.HEcDifSecado = Convert.ToDouble(txtHEcDif.Text, CultureInfo.InvariantCulture);
 
             this.Close();
         }

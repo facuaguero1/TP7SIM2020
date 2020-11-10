@@ -52,6 +52,20 @@
     <Compile Include="Frm_ConfiguracionParametros.Designer.cs">
       <DependentUpon>Frm_ConfiguracionParametros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\Areas\AspirarAlfombras.cs" />
+    <Compile Include="Logica\Areas\EstadoArea.cs" />
+    <Compile Include="Logica\Areas\Lavado.cs" />
+    <Compile Include="Logica\Areas\PonerAlfombras.cs" />
+    <Compile Include="Logica\Areas\QuitarAlfombras.cs" />
+    <Compile Include="Logica\Areas\Secado.cs" />
+    <Compile Include="Logica\Autos\Alfombra.cs" />
+    <Compile Include="Logica\Autos\Auto.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_ConfiguracionParametros.resx">
       <DependentUpon>Frm_ConfiguracionParametros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

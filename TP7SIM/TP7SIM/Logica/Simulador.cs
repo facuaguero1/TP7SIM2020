@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using TP7SIM.Logica.Helper;
 using TP7SIM.Logica.Eventos;
+using TP7SIM.Logica.Autos;
+using TP7SIM.Logica.Areas;
 
 namespace TP7SIM.Logica
 {
@@ -16,7 +18,7 @@ namespace TP7SIM.Logica
         {
             DateTime relojInicio = MySettings.HorarioInicio;
 
-            form.progressbar.Maximum = MySettings.DiasSimulacion;
+            form.progressbar.Maximum = MySettings.CantMaxClientes;
 
             Evento e_anterior = new Evento
             {
@@ -24,49 +26,52 @@ namespace TP7SIM.Logica
                 Tipo = Evento.TipoEvento.Inicio,
                 Reloj = relojInicio,
                 _LLegada = new Llegada(),
-                Pedido = new Pedido(relojInicio)
-                {
-                    FechaAbandono = DateTime.MinValue
-                },
-                ColaPedidos_APreparar = new List<Pedido>(),
 
-                ColaPedidos_AEntregar = new List<Pedido>(),
+                _Auto = new Auto(relojInicio),
 
-                Empleado_1 = new Cocinero
-                {
-                    Estado = EstadoEmpleado.Libre,
-                    FechaProximoFinPreparacion = DateTime.MinValue,
-                    UltimaPreparacion = relojInicio
-                },
-                Empleado_2 = new Cocinero
-                {
-                    Estado = EstadoEmpleado.Libre,
-                    FechaProximoFinPreparacion = DateTime.MinValue,
-                    UltimaPreparacion = relojInicio
-                },
-                Empleado_3 = new Cocinero
-                {
-                    Estado = EstadoEmpleado.Libre,
-                    FechaProximoFinPreparacion = DateTime.MinValue,
-                    UltimaPreparacion = relojInicio
-                },
-                Repartidor = new Delivery
-                {
-                    Estado = EstadoEmpleado.Libre,
-                    Mochila = new List<Pedido>(),
-                    ProximoFinEntrega = DateTime.MinValue
-                },
-                _Turno = new Turno
-                {
-                    EstadoTurno = Turno.Estado.Abierto,
-                    ProximoCierre = relojInicio.AddHours(MySettings.TiempoFinTurno)
-                },
 
-                resultadoFinSim = new ResultadoFinSim(),
-                resultadoFinTurno = new ResultadoFinTurno()
+                ColaQuitarAlfombra = new List<Auto>(),
+                ColaAspirarAlfombra = new List<Alfombra>(),
+                ColaPonerAlfombra = new List<Auto>(),
+                ColaLavado = new List<Auto>(),
+                ColaSecado = new List<Auto>(),
+                
+
+                EmpleadoQA = new QuitarAlfombras
+                {
+                    Estado = EstadoArea.Libre,
+                    FechaProximoFinAtencion = DateTime.MinValue,
+                },
+                EmpleadoAA = new AspirarAlfombras
+                {
+                    Estado = EstadoArea.Libre,
+                    FechaProximoFinAtencion = DateTime.MinValue,
+                },
+                EmpleadoLavado1 = new Lavado
+                {
+                    Estado = EstadoArea.Libre,
+                    FechaProximoFinAtencion = DateTime.MinValue,
+                },
+                EmpleadoLavado2 = new Lavado
+                {
+                    Estado = EstadoArea.Libre,
+                    FechaProximoFinAtencion = DateTime.MinValue,
+                },
+                EmpleadoSecado = new Secado
+                {
+                    Estado = EstadoArea.Libre,
+                    FechaProximoFinAtencion = DateTime.MinValue,
+                },
+                EmpleadoPA = new PonerAlfombras
+                {
+                    Estado = EstadoArea.Libre,
+                    FechaProximoFinAtencion = DateTime.MinValue,
+                }
+
+
 
             };
-            e_anterior._Turno.CalcularProximaApertura(0);
+            /*
             e_anterior._LLegada.CalcularProximaLlegada(e_anterior.Reloj);
             form.MostrarEnGrilla(e_anterior);
 
@@ -162,7 +167,7 @@ namespace TP7SIM.Logica
                 form.progressbar.Value = diasSimulados;
             }
 
-            form.PintarCeldas();
-        }
+            form.PintarCeldas();*/
+            }
     }
 }

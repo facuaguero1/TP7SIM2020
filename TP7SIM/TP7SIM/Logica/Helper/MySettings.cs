@@ -18,17 +18,9 @@ namespace TP7SIM.Logica.Helper
         public static double MediaLlegadas { get; set; }
 
 
-        //Tiempos de cada area
+        //Tiempos las areas de tiempo constante
 
         public static double TiempoQuitarAlfombras { get; set; }
-
-        public static double TiempoAreaAspiradoUniformeA { get; set; }
-
-        public static double TiempoAreaAspiradoUniformeB { get; set; }
-
-        public static double TiempoLavadoUniformeA { get; set; }
-
-        public static double TiempoLavadoUniformeB { get; set; }
 
         public static double TiempoPonerAlfombras { get; set; }
 
@@ -37,7 +29,19 @@ namespace TP7SIM.Logica.Helper
 
         public static class Distribuciones
         {
-            public static class Uniforme
+            public static class UniformeAspirado
+            {
+                public static double a { get; set; }
+                public static double b { get; set; }
+
+                public static double Calcular()
+                {
+                    var prob = Simulador.Generador.NextDouble();
+                    return a + prob * (b - a);
+                }
+            }
+
+            public static class UniformeLavado
             {
                 public static double a { get; set; }
                 public static double b { get; set; }
