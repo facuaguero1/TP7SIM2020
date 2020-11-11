@@ -38,5 +38,43 @@ namespace TP7SIM
             dataGridView1.Rows.Clear();
             Simulador.Simular(this);
         }
+
+        public void PintarCeldas()
+        {
+
+            Color color;
+            string tipo = String.Empty;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.Cells[1].Value == null) break;
+                tipo = row.Cells[1].Value.ToString();
+
+                switch (tipo)
+                {
+                    case "LlegadaCliente":
+                        color = Color.PapayaWhip;
+                        break;
+                    case "FinQuitarAlfombras":
+                        color = Color.LightSeaGreen;
+                        break;
+                    case "FinPonerAlfombras":
+                        color = Color.Green;
+                        break;
+                    case "FinLavado1":
+                    case "FinLavado2":
+                        color = Color.Khaki;
+                        break;
+                    case "Inicio":
+                        color = Color.HotPink;
+                        break;
+
+                    default:
+                        color = Color.White;
+                        break;
+                }
+
+                row.DefaultCellStyle.BackColor = color;
+            }
+        }
     }
 }

@@ -8,15 +8,17 @@ namespace TP7SIM.Logica.Autos
 {
     class Auto
     {
-        public Auto(DateTime reloj)
+        public Auto(DateTime reloj, int nroAuto)
         {
             FechaLlegada = reloj;
-            _Alfombra = new Alfombra();
+            NroAuto = nroAuto;
+            _Alfombra = new Alfombra(nroAuto);
         }
 
         public DateTime FechaLlegada { get; set; }
         public DateTime FechaFinServicio { get; set; }
         public int NroAuto { get; set; }
         public Alfombra _Alfombra { get; set; }
+        public DateTime FechaFinQuitarAlfombras { get; set; }
     }
 }

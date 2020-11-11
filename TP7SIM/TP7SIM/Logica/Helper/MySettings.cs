@@ -64,6 +64,42 @@ namespace TP7SIM.Logica.Helper
             }
 
         }
+
+        public static class EcDiferencial
+        {
+            
+            public static double CalcularCantidadMinutos()
+            {
+                // Vector de doble estado
+                double[] anterior = new double[3];
+                double[] actual = new double[3];
+
+                // Condiciones Iniciales
+                var t = 0.00;
+                var h = MySettings.HEcDifSecado;
+                var H = 100;
+
+                // Seteo de condiciones inciiales en el primer vector
+                anterior[0] = Math.Round(t, 4);
+                anterior[1] = H;
+                anterior[2] = Math.Round((-5*Math.Pow(t,2)) + (2*H) - 200, 4);
+
+                // Calculo...
+                while (anterior[1] != 0)
+                {
+                    actual = new double[3];
+                    actual[0] = Math.Round(anterior[0] + h, 4);
+                    actual[1] = Math.Round(anterior[1] + (anterior[2] * h), 4);
+                    actual[2] = Math.Round((-5 * Math.Pow(actual[0], 2)) + (2 * actual[1]) - 200, 4);
+
+                    if (actual[1] <= 0) actual[1] = 0;
+
+                    anterior = actual;
+                }
+
+                return anterior[0];
+            }
+        }
         public static TimeSpan RoundTimeSpan(int precision, TimeSpan ts)
         {
             const int timespan_size = 7;

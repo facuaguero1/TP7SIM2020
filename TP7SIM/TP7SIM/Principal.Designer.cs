@@ -49,55 +49,38 @@
             this.TiempoAtencionQA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProxFinAtencionQA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoEmpl2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoCocina2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProxFinPrep2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UltimoFinAtencion2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TamColaLavado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColaLavado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoEmpl3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoCocina3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProxFinPrep3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UltimoFinAtencion3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoLavado1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtencionLavado1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProxFinAtencionLavado1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColaPendientesEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PendientesEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mochila = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TiempoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProxFinEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoLavado2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtencionLavado2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProxFinAtencionLavado2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoTurno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProxCierreTurno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ProximoInicioTurno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TamColaSecado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColaSecado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoSecado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtencionSecado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProxFinAtencionSecado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TamColaAA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColaAA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtencionAA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProxFinAtencionAA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TamColaPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColaPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AlfombrasListas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TiempoAtencionPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProxFinAtencionPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -161,55 +144,38 @@
             this.TiempoAtencionQA,
             this.ProxFinAtencionQA,
             this.Column5,
-            this.EstadoEmpl2,
-            this.TiempoCocina2,
-            this.ProxFinPrep2,
-            this.UltimoFinAtencion2,
+            this.TamColaLavado,
+            this.ColaLavado,
             this.Column6,
-            this.EstadoEmpl3,
-            this.TiempoCocina3,
-            this.ProxFinPrep3,
-            this.UltimoFinAtencion3,
+            this.EstadoLavado1,
+            this.TiempoAtencionLavado1,
+            this.ProxFinAtencionLavado1,
             this.Column7,
-            this.ColaPendientesEntrega,
-            this.PendientesEntrega,
-            this.Column8,
-            this.EstadoDelivery,
-            this.Mochila,
-            this.TiempoEntrega,
-            this.ProxFinEntrega,
+            this.EstadoLavado2,
+            this.TiempoAtencionLavado2,
+            this.ProxFinAtencionLavado2,
             this.Column9,
-            this.EstadoTurno,
-            this.ProxCierreTurno,
-            this.ProximoInicioTurno,
+            this.TamColaSecado,
+            this.ColaSecado,
             this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
+            this.EstadoSecado,
+            this.TiempoAtencionSecado,
+            this.ProxFinAtencionSecado,
             this.Column14,
-            this.Column16,
-            this.Column17,
+            this.TamColaAA,
+            this.ColaAA,
             this.Column18,
             this.Column19,
-            this.Column15,
-            this.Column20,
+            this.TiempoAtencionAA,
+            this.ProxFinAtencionAA,
             this.Column21,
-            this.Column22,
-            this.Column23,
-            this.Column24,
+            this.TamColaPA,
+            this.ColaPA,
+            this.AlfombrasListas,
             this.Column25,
             this.Column31,
-            this.Column26,
-            this.Column27,
-            this.Column28,
-            this.Column29,
-            this.Column30,
-            this.Column34,
-            this.Column35,
-            this.Column32,
-            this.Column33,
-            this.Column36,
-            this.Column38});
+            this.TiempoAtencionPA,
+            this.ProxFinAtencionPA});
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -318,7 +284,7 @@
             // 
             // EstadoQA
             // 
-            this.EstadoQA.HeaderText = "Estado";
+            this.EstadoQA.HeaderText = "Estado QA";
             this.EstadoQA.MinimumWidth = 6;
             this.EstadoQA.Name = "EstadoQA";
             this.EstadoQA.ReadOnly = true;
@@ -349,37 +315,21 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 20;
             // 
-            // EstadoEmpl2
+            // TamColaLavado
             // 
-            this.EstadoEmpl2.HeaderText = "Estado";
-            this.EstadoEmpl2.MinimumWidth = 6;
-            this.EstadoEmpl2.Name = "EstadoEmpl2";
-            this.EstadoEmpl2.ReadOnly = true;
-            this.EstadoEmpl2.Width = 125;
+            this.TamColaLavado.HeaderText = "Tamaño Cola Lavado";
+            this.TamColaLavado.MinimumWidth = 6;
+            this.TamColaLavado.Name = "TamColaLavado";
+            this.TamColaLavado.ReadOnly = true;
+            this.TamColaLavado.Width = 125;
             // 
-            // TiempoCocina2
+            // ColaLavado
             // 
-            this.TiempoCocina2.HeaderText = "Tiempo de Cocina";
-            this.TiempoCocina2.MinimumWidth = 6;
-            this.TiempoCocina2.Name = "TiempoCocina2";
-            this.TiempoCocina2.ReadOnly = true;
-            this.TiempoCocina2.Width = 125;
-            // 
-            // ProxFinPrep2
-            // 
-            this.ProxFinPrep2.HeaderText = "Prox. Fin Preparación";
-            this.ProxFinPrep2.MinimumWidth = 6;
-            this.ProxFinPrep2.Name = "ProxFinPrep2";
-            this.ProxFinPrep2.ReadOnly = true;
-            this.ProxFinPrep2.Width = 125;
-            // 
-            // UltimoFinAtencion2
-            // 
-            this.UltimoFinAtencion2.HeaderText = "Ultimo Fin Atencion";
-            this.UltimoFinAtencion2.MinimumWidth = 6;
-            this.UltimoFinAtencion2.Name = "UltimoFinAtencion2";
-            this.UltimoFinAtencion2.ReadOnly = true;
-            this.UltimoFinAtencion2.Width = 125;
+            this.ColaLavado.HeaderText = "Cola Lavado";
+            this.ColaLavado.MinimumWidth = 6;
+            this.ColaLavado.Name = "ColaLavado";
+            this.ColaLavado.ReadOnly = true;
+            this.ColaLavado.Width = 125;
             // 
             // Column6
             // 
@@ -390,37 +340,29 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 20;
             // 
-            // EstadoEmpl3
+            // EstadoLavado1
             // 
-            this.EstadoEmpl3.HeaderText = "Estado";
-            this.EstadoEmpl3.MinimumWidth = 6;
-            this.EstadoEmpl3.Name = "EstadoEmpl3";
-            this.EstadoEmpl3.ReadOnly = true;
-            this.EstadoEmpl3.Width = 125;
+            this.EstadoLavado1.HeaderText = "Estado Lavado 1";
+            this.EstadoLavado1.MinimumWidth = 6;
+            this.EstadoLavado1.Name = "EstadoLavado1";
+            this.EstadoLavado1.ReadOnly = true;
+            this.EstadoLavado1.Width = 125;
             // 
-            // TiempoCocina3
+            // TiempoAtencionLavado1
             // 
-            this.TiempoCocina3.HeaderText = "Tiempo de Cocina";
-            this.TiempoCocina3.MinimumWidth = 6;
-            this.TiempoCocina3.Name = "TiempoCocina3";
-            this.TiempoCocina3.ReadOnly = true;
-            this.TiempoCocina3.Width = 125;
+            this.TiempoAtencionLavado1.HeaderText = "Tiempo de Atención";
+            this.TiempoAtencionLavado1.MinimumWidth = 6;
+            this.TiempoAtencionLavado1.Name = "TiempoAtencionLavado1";
+            this.TiempoAtencionLavado1.ReadOnly = true;
+            this.TiempoAtencionLavado1.Width = 125;
             // 
-            // ProxFinPrep3
+            // ProxFinAtencionLavado1
             // 
-            this.ProxFinPrep3.HeaderText = "Prox. Fin Preparación";
-            this.ProxFinPrep3.MinimumWidth = 6;
-            this.ProxFinPrep3.Name = "ProxFinPrep3";
-            this.ProxFinPrep3.ReadOnly = true;
-            this.ProxFinPrep3.Width = 125;
-            // 
-            // UltimoFinAtencion3
-            // 
-            this.UltimoFinAtencion3.HeaderText = "Ultimo Fin Atencion";
-            this.UltimoFinAtencion3.MinimumWidth = 6;
-            this.UltimoFinAtencion3.Name = "UltimoFinAtencion3";
-            this.UltimoFinAtencion3.ReadOnly = true;
-            this.UltimoFinAtencion3.Width = 125;
+            this.ProxFinAtencionLavado1.HeaderText = "Prox. Fin Atención";
+            this.ProxFinAtencionLavado1.MinimumWidth = 6;
+            this.ProxFinAtencionLavado1.Name = "ProxFinAtencionLavado1";
+            this.ProxFinAtencionLavado1.ReadOnly = true;
+            this.ProxFinAtencionLavado1.Width = 125;
             // 
             // Column7
             // 
@@ -431,62 +373,29 @@
             this.Column7.ReadOnly = true;
             this.Column7.Width = 20;
             // 
-            // ColaPendientesEntrega
+            // EstadoLavado2
             // 
-            this.ColaPendientesEntrega.HeaderText = "Cola Pedidos Pendiente Entrega";
-            this.ColaPendientesEntrega.MinimumWidth = 6;
-            this.ColaPendientesEntrega.Name = "ColaPendientesEntrega";
-            this.ColaPendientesEntrega.ReadOnly = true;
-            this.ColaPendientesEntrega.Width = 125;
+            this.EstadoLavado2.HeaderText = "Estado Lavado 2";
+            this.EstadoLavado2.MinimumWidth = 6;
+            this.EstadoLavado2.Name = "EstadoLavado2";
+            this.EstadoLavado2.ReadOnly = true;
+            this.EstadoLavado2.Width = 125;
             // 
-            // PendientesEntrega
+            // TiempoAtencionLavado2
             // 
-            this.PendientesEntrega.HeaderText = "Pendientes de Entrega";
-            this.PendientesEntrega.MinimumWidth = 6;
-            this.PendientesEntrega.Name = "PendientesEntrega";
-            this.PendientesEntrega.ReadOnly = true;
-            this.PendientesEntrega.Width = 125;
+            this.TiempoAtencionLavado2.HeaderText = "Tiempo de Atención";
+            this.TiempoAtencionLavado2.MinimumWidth = 6;
+            this.TiempoAtencionLavado2.Name = "TiempoAtencionLavado2";
+            this.TiempoAtencionLavado2.ReadOnly = true;
+            this.TiempoAtencionLavado2.Width = 125;
             // 
-            // Column8
+            // ProxFinAtencionLavado2
             // 
-            this.Column8.FillWeight = 20F;
-            this.Column8.HeaderText = "";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 20;
-            // 
-            // EstadoDelivery
-            // 
-            this.EstadoDelivery.HeaderText = "Estado";
-            this.EstadoDelivery.MinimumWidth = 6;
-            this.EstadoDelivery.Name = "EstadoDelivery";
-            this.EstadoDelivery.ReadOnly = true;
-            this.EstadoDelivery.Width = 125;
-            // 
-            // Mochila
-            // 
-            this.Mochila.HeaderText = "Mochila";
-            this.Mochila.MinimumWidth = 6;
-            this.Mochila.Name = "Mochila";
-            this.Mochila.ReadOnly = true;
-            this.Mochila.Width = 125;
-            // 
-            // TiempoEntrega
-            // 
-            this.TiempoEntrega.HeaderText = "Tiempo de Entrega";
-            this.TiempoEntrega.MinimumWidth = 6;
-            this.TiempoEntrega.Name = "TiempoEntrega";
-            this.TiempoEntrega.ReadOnly = true;
-            this.TiempoEntrega.Width = 125;
-            // 
-            // ProxFinEntrega
-            // 
-            this.ProxFinEntrega.HeaderText = "Prox. Fin Entrega";
-            this.ProxFinEntrega.MinimumWidth = 6;
-            this.ProxFinEntrega.Name = "ProxFinEntrega";
-            this.ProxFinEntrega.ReadOnly = true;
-            this.ProxFinEntrega.Width = 125;
+            this.ProxFinAtencionLavado2.HeaderText = "Prox. Fin Atención";
+            this.ProxFinAtencionLavado2.MinimumWidth = 6;
+            this.ProxFinAtencionLavado2.Name = "ProxFinAtencionLavado2";
+            this.ProxFinAtencionLavado2.ReadOnly = true;
+            this.ProxFinAtencionLavado2.Width = 125;
             // 
             // Column9
             // 
@@ -497,28 +406,20 @@
             this.Column9.ReadOnly = true;
             this.Column9.Width = 20;
             // 
-            // EstadoTurno
+            // TamColaSecado
             // 
-            this.EstadoTurno.HeaderText = "Estado";
-            this.EstadoTurno.MinimumWidth = 6;
-            this.EstadoTurno.Name = "EstadoTurno";
-            this.EstadoTurno.ReadOnly = true;
-            this.EstadoTurno.Width = 125;
+            this.TamColaSecado.HeaderText = "Tam. Cola Secado";
+            this.TamColaSecado.MinimumWidth = 6;
+            this.TamColaSecado.Name = "TamColaSecado";
+            this.TamColaSecado.ReadOnly = true;
+            this.TamColaSecado.Width = 125;
             // 
-            // ProxCierreTurno
+            // ColaSecado
             // 
-            this.ProxCierreTurno.HeaderText = "Prox. Cierre Turno";
-            this.ProxCierreTurno.MinimumWidth = 6;
-            this.ProxCierreTurno.Name = "ProxCierreTurno";
-            this.ProxCierreTurno.Width = 125;
-            // 
-            // ProximoInicioTurno
-            // 
-            this.ProximoInicioTurno.HeaderText = "ProximoInicioTurno";
-            this.ProximoInicioTurno.MinimumWidth = 6;
-            this.ProximoInicioTurno.Name = "ProximoInicioTurno";
-            this.ProximoInicioTurno.ReadOnly = true;
-            this.ProximoInicioTurno.Width = 125;
+            this.ColaSecado.HeaderText = "Cola Secado";
+            this.ColaSecado.MinimumWidth = 6;
+            this.ColaSecado.Name = "ColaSecado";
+            this.ColaSecado.Width = 125;
             // 
             // Column10
             // 
@@ -528,75 +429,77 @@
             this.Column10.Name = "Column10";
             this.Column10.Width = 20;
             // 
-            // Column11
+            // EstadoSecado
             // 
-            this.Column11.HeaderText = "TiempoEntrePedidos";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 125;
+            this.EstadoSecado.HeaderText = "Estado Secado";
+            this.EstadoSecado.MinimumWidth = 6;
+            this.EstadoSecado.Name = "EstadoSecado";
+            this.EstadoSecado.Width = 125;
             // 
-            // Column12
+            // TiempoAtencionSecado
             // 
-            this.Column12.HeaderText = "CantidadPedidoXHora";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 125;
+            this.TiempoAtencionSecado.HeaderText = "Tiempo de Atención";
+            this.TiempoAtencionSecado.MinimumWidth = 6;
+            this.TiempoAtencionSecado.Name = "TiempoAtencionSecado";
+            this.TiempoAtencionSecado.Width = 125;
             // 
-            // Column13
+            // ProxFinAtencionSecado
             // 
-            this.Column13.HeaderText = "Cantidad Tipo Pedido";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 125;
+            this.ProxFinAtencionSecado.HeaderText = "Prox. Fin Atención";
+            this.ProxFinAtencionSecado.MinimumWidth = 6;
+            this.ProxFinAtencionSecado.Name = "ProxFinAtencionSecado";
+            this.ProxFinAtencionSecado.Width = 125;
             // 
             // Column14
             // 
-            this.Column14.HeaderText = "Tiempo Prep Sandwich";
+            this.Column14.FillWeight = 20F;
+            this.Column14.HeaderText = "";
             this.Column14.MinimumWidth = 6;
             this.Column14.Name = "Column14";
-            this.Column14.Width = 125;
+            this.Column14.Width = 20;
             // 
-            // Column16
+            // TamColaAA
             // 
-            this.Column16.HeaderText = "Tiempo Coccion Pizza";
-            this.Column16.MinimumWidth = 6;
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 125;
+            this.TamColaAA.HeaderText = "Tam. Cola AA";
+            this.TamColaAA.MinimumWidth = 6;
+            this.TamColaAA.Name = "TamColaAA";
+            this.TamColaAA.Width = 125;
             // 
-            // Column17
+            // ColaAA
             // 
-            this.Column17.HeaderText = "Cantidad Empanadas Demand";
-            this.Column17.MinimumWidth = 6;
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 125;
+            this.ColaAA.HeaderText = "Cola Aspirado Alfombras";
+            this.ColaAA.MinimumWidth = 6;
+            this.ColaAA.Name = "ColaAA";
+            this.ColaAA.Width = 125;
             // 
             // Column18
             // 
-            this.Column18.HeaderText = "Tiempo Coccion Empanadas";
+            this.Column18.FillWeight = 20F;
+            this.Column18.HeaderText = "";
             this.Column18.MinimumWidth = 6;
             this.Column18.Name = "Column18";
-            this.Column18.Width = 125;
+            this.Column18.Width = 20;
             // 
             // Column19
             // 
-            this.Column19.HeaderText = "Ingreso Hamburguesa/Lomito";
+            this.Column19.HeaderText = "Estado AA";
             this.Column19.MinimumWidth = 6;
             this.Column19.Name = "Column19";
             this.Column19.Width = 125;
             // 
-            // Column15
+            // TiempoAtencionAA
             // 
-            this.Column15.HeaderText = "Orden Uso Empleados";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 125;
+            this.TiempoAtencionAA.HeaderText = "Tiempo de Atención";
+            this.TiempoAtencionAA.MinimumWidth = 6;
+            this.TiempoAtencionAA.Name = "TiempoAtencionAA";
+            this.TiempoAtencionAA.Width = 125;
             // 
-            // Column20
+            // ProxFinAtencionAA
             // 
-            this.Column20.HeaderText = "Tiempo Entrega Pedidos";
-            this.Column20.MinimumWidth = 6;
-            this.Column20.Name = "Column20";
-            this.Column20.Width = 125;
+            this.ProxFinAtencionAA.HeaderText = "Prox. Fin Atención";
+            this.ProxFinAtencionAA.MinimumWidth = 6;
+            this.ProxFinAtencionAA.Name = "ProxFinAtencionAA";
+            this.ProxFinAtencionAA.Width = 125;
             // 
             // Column21
             // 
@@ -607,132 +510,62 @@
             this.Column21.ReadOnly = true;
             this.Column21.Width = 20;
             // 
-            // Column22
+            // TamColaPA
             // 
-            this.Column22.HeaderText = "Tiempo Libre Cocineros";
-            this.Column22.MinimumWidth = 6;
-            this.Column22.Name = "Column22";
-            this.Column22.ReadOnly = true;
-            this.Column22.Width = 125;
+            this.TamColaPA.HeaderText = "Tam. Cola PA";
+            this.TamColaPA.MinimumWidth = 6;
+            this.TamColaPA.Name = "TamColaPA";
+            this.TamColaPA.ReadOnly = true;
+            this.TamColaPA.Width = 125;
             // 
-            // Column23
+            // ColaPA
             // 
-            this.Column23.HeaderText = "Tiempo Promedio Libre Cocineros";
-            this.Column23.MinimumWidth = 6;
-            this.Column23.Name = "Column23";
-            this.Column23.ReadOnly = true;
-            this.Column23.Width = 125;
+            this.ColaPA.HeaderText = "Cola Poner Alfombras";
+            this.ColaPA.MinimumWidth = 6;
+            this.ColaPA.Name = "ColaPA";
+            this.ColaPA.ReadOnly = true;
+            this.ColaPA.Width = 125;
             // 
-            // Column24
+            // AlfombrasListas
             // 
-            this.Column24.HeaderText = "Tiempo Libre Delivery";
-            this.Column24.MinimumWidth = 6;
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
-            this.Column24.Width = 125;
+            this.AlfombrasListas.HeaderText = "Alfombras Listas";
+            this.AlfombrasListas.MinimumWidth = 6;
+            this.AlfombrasListas.Name = "AlfombrasListas";
+            this.AlfombrasListas.ReadOnly = true;
+            this.AlfombrasListas.Width = 125;
             // 
             // Column25
             // 
-            this.Column25.HeaderText = "Tiempo Promedio Libre Delivery";
+            this.Column25.FillWeight = 20F;
+            this.Column25.HeaderText = "";
             this.Column25.MinimumWidth = 6;
             this.Column25.Name = "Column25";
             this.Column25.ReadOnly = true;
-            this.Column25.Width = 125;
+            this.Column25.Width = 20;
             // 
             // Column31
             // 
-            this.Column31.HeaderText = "Ventas Perdidas";
+            this.Column31.HeaderText = "Estado PA";
             this.Column31.MinimumWidth = 6;
             this.Column31.Name = "Column31";
             this.Column31.ReadOnly = true;
             this.Column31.Width = 125;
             // 
-            // Column26
+            // TiempoAtencionPA
             // 
-            this.Column26.HeaderText = "Ingreso Perdido";
-            this.Column26.MinimumWidth = 6;
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            this.Column26.Width = 125;
+            this.TiempoAtencionPA.HeaderText = "Tiempo de Atención";
+            this.TiempoAtencionPA.MinimumWidth = 6;
+            this.TiempoAtencionPA.Name = "TiempoAtencionPA";
+            this.TiempoAtencionPA.ReadOnly = true;
+            this.TiempoAtencionPA.Width = 125;
             // 
-            // Column27
+            // ProxFinAtencionPA
             // 
-            this.Column27.HeaderText = "Ingreso Promedio Perdido";
-            this.Column27.MinimumWidth = 6;
-            this.Column27.Name = "Column27";
-            this.Column27.ReadOnly = true;
-            this.Column27.Width = 125;
-            // 
-            // Column28
-            // 
-            this.Column28.HeaderText = "Ventas Gratis";
-            this.Column28.MinimumWidth = 6;
-            this.Column28.Name = "Column28";
-            this.Column28.ReadOnly = true;
-            this.Column28.Width = 125;
-            // 
-            // Column29
-            // 
-            this.Column29.HeaderText = "Ingresos";
-            this.Column29.MinimumWidth = 6;
-            this.Column29.Name = "Column29";
-            this.Column29.ReadOnly = true;
-            this.Column29.Width = 125;
-            // 
-            // Column30
-            // 
-            this.Column30.HeaderText = "Ingreso Promedio Diario";
-            this.Column30.MinimumWidth = 6;
-            this.Column30.Name = "Column30";
-            this.Column30.ReadOnly = true;
-            this.Column30.Width = 125;
-            // 
-            // Column34
-            // 
-            this.Column34.HeaderText = "Tiempo Espera Preparacion";
-            this.Column34.MinimumWidth = 6;
-            this.Column34.Name = "Column34";
-            this.Column34.ReadOnly = true;
-            this.Column34.Width = 125;
-            // 
-            // Column35
-            // 
-            this.Column35.HeaderText = "Tiempo Promedio Espera Preparacion";
-            this.Column35.MinimumWidth = 6;
-            this.Column35.Name = "Column35";
-            this.Column35.ReadOnly = true;
-            this.Column35.Width = 125;
-            // 
-            // Column32
-            // 
-            this.Column32.HeaderText = "Tiempo Espera Pedido";
-            this.Column32.MinimumWidth = 6;
-            this.Column32.Name = "Column32";
-            this.Column32.ReadOnly = true;
-            this.Column32.Width = 125;
-            // 
-            // Column33
-            // 
-            this.Column33.HeaderText = "Tiempo Promedio Espera Pedido";
-            this.Column33.MinimumWidth = 6;
-            this.Column33.Name = "Column33";
-            this.Column33.ReadOnly = true;
-            this.Column33.Width = 125;
-            // 
-            // Column36
-            // 
-            this.Column36.HeaderText = "Prob $250 o menos";
-            this.Column36.MinimumWidth = 6;
-            this.Column36.Name = "Column36";
-            this.Column36.ReadOnly = true;
-            this.Column36.Width = 125;
-            // 
-            // Column38
-            // 
-            this.Column38.HeaderText = "Cantidad Maxima Pedidos post 25 min";
-            this.Column38.MinimumWidth = 6;
-            this.Column38.Name = "Column38";
-            this.Column38.Width = 125;
+            this.ProxFinAtencionPA.HeaderText = "Prox. Fin Atención PA";
+            this.ProxFinAtencionPA.MinimumWidth = 6;
+            this.ProxFinAtencionPA.Name = "ProxFinAtencionPA";
+            this.ProxFinAtencionPA.ReadOnly = true;
+            this.ProxFinAtencionPA.Width = 125;
             // 
             // Principal
             // 
@@ -773,55 +606,38 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionQA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionQA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoEmpl2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoCocina2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinPrep2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UltimoFinAtencion2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TamColaLavado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColaLavado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoEmpl3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoCocina3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinPrep3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UltimoFinAtencion3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoLavado1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionLavado1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionLavado1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColaPendientesEntrega;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PendientesEntrega;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoDelivery;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mochila;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoEntrega;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinEntrega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoLavado2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionLavado2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionLavado2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoTurno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProxCierreTurno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProximoInicioTurno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TamColaSecado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColaSecado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoSecado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionSecado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionSecado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TamColaAA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColaAA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionAA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionAA;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column22;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TamColaPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColaPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AlfombrasListas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column25;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column33;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionPA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionPA;
     }
 }
 
