@@ -85,7 +85,7 @@
             // txtMediaLlegadas
             // 
             this.txtMediaLlegadas.Location = new System.Drawing.Point(150, 60);
-            this.txtMediaLlegadas.Mask = "##.##";
+            this.txtMediaLlegadas.Mask = "##,##";
             this.txtMediaLlegadas.Name = "txtMediaLlegadas";
             this.txtMediaLlegadas.Size = new System.Drawing.Size(66, 20);
             this.txtMediaLlegadas.TabIndex = 2;
@@ -164,7 +164,7 @@
             // txtL_A
             // 
             this.txtL_A.Location = new System.Drawing.Point(65, 21);
-            this.txtL_A.Mask = "##.##";
+            this.txtL_A.Mask = "##,##";
             this.txtL_A.Name = "txtL_A";
             this.txtL_A.Size = new System.Drawing.Size(58, 20);
             this.txtL_A.TabIndex = 3;
@@ -172,7 +172,7 @@
             // txtL_B
             // 
             this.txtL_B.Location = new System.Drawing.Point(65, 63);
-            this.txtL_B.Mask = "##.##";
+            this.txtL_B.Mask = "##,##";
             this.txtL_B.Name = "txtL_B";
             this.txtL_B.Size = new System.Drawing.Size(58, 20);
             this.txtL_B.TabIndex = 2;
@@ -211,7 +211,7 @@
             // txtAA_A
             // 
             this.txtAA_A.Location = new System.Drawing.Point(65, 21);
-            this.txtAA_A.Mask = "##.##";
+            this.txtAA_A.Mask = "##,##";
             this.txtAA_A.Name = "txtAA_A";
             this.txtAA_A.Size = new System.Drawing.Size(58, 20);
             this.txtAA_A.TabIndex = 3;
@@ -219,7 +219,7 @@
             // txtAA_B
             // 
             this.txtAA_B.Location = new System.Drawing.Point(65, 63);
-            this.txtAA_B.Mask = "##.##";
+            this.txtAA_B.Mask = "##,##";
             this.txtAA_B.Name = "txtAA_B";
             this.txtAA_B.Size = new System.Drawing.Size(58, 20);
             this.txtAA_B.TabIndex = 2;
@@ -236,7 +236,7 @@
             // txtPA
             // 
             this.txtPA.Location = new System.Drawing.Point(319, 29);
-            this.txtPA.Mask = "##.##";
+            this.txtPA.Mask = "##,##";
             this.txtPA.Name = "txtPA";
             this.txtPA.Size = new System.Drawing.Size(58, 20);
             this.txtPA.TabIndex = 1;
@@ -244,7 +244,7 @@
             // txtQA
             // 
             this.txtQA.Location = new System.Drawing.Point(114, 32);
-            this.txtQA.Mask = "##.##";
+            this.txtQA.Mask = "##,##";
             this.txtQA.Name = "txtQA";
             this.txtQA.Size = new System.Drawing.Size(54, 20);
             this.txtQA.TabIndex = 0;
@@ -252,7 +252,7 @@
             // txtHEcDif
             // 
             this.txtHEcDif.Location = new System.Drawing.Point(57, 44);
-            this.txtHEcDif.Mask = "#.##";
+            this.txtHEcDif.Mask = "#,##";
             this.txtHEcDif.Name = "txtHEcDif";
             this.txtHEcDif.Size = new System.Drawing.Size(66, 20);
             this.txtHEcDif.TabIndex = 3;

@@ -11,7 +11,7 @@ using TP7SIM.Logica.Areas;
 
 namespace TP7SIM.Logica
 {
-    class Simulador
+    public class Simulador
     {
         public static Random Generador = new Random();
 
@@ -19,7 +19,8 @@ namespace TP7SIM.Logica
         {
             DateTime relojInicio = MySettings.HorarioInicio;
 
-            form.progressbar.Maximum = MySettings.CantMaxClientes;
+            var maxEventos = MySettings.CantMaxClientes * 6 ;
+            form.progressbar.Maximum = maxEventos;
 
             Evento e_anterior = new Evento
             {
@@ -39,7 +40,7 @@ namespace TP7SIM.Logica
                 ColaLavado = new List<Auto>(),
                 ColaSecado = new List<Auto>(),
                 ColaAlfombrasListas = new Hashtable(),
-                
+
 
                 EmpleadoQA = new QuitarAlfombras
                 {
@@ -75,15 +76,18 @@ namespace TP7SIM.Logica
 
 
             };
-            
+
             e_anterior._LLegada.CalcularProximaLlegada(e_anterior.Reloj);
-            //form.MostrarEnGrilla(e_anterior);
-            
-            var clientes = 0;
-            while (clientes < MySettings.CantMaxClientes)
+            form.MostrarEnGrilla(e_anterior);
+
+            Console.WriteLine(e_anterior.Tipo + "    " + e_anterior.Reloj + "    ");
+
+            var eventos = 0;
+            while (eventos < maxEventos)
             {
-
-
+                eventos++;
+                //Console.WriteLine("Cantidad de eventos: " +  eventos);
+                if(eventos % 500 == 0) System.GC.Collect();
                 var e_actual = new Evento(e_anterior);
                 e_actual.EventoAnterior = e_anterior;
                 //determinamos el nro de evento
@@ -91,12 +95,12 @@ namespace TP7SIM.Logica
 
                 //determinamos el tipo
                 e_actual.Tipo = DeterminarTipoEvento(e_actual);
+                //Console.WriteLine(e_actual.Tipo + "    " + e_actual.Reloj + "    ");
 
                 switch (e_actual.Tipo)
                 {
                     case Evento.TipoEvento.LlegadaCliente:
                         e_actual.LlegadaCliente_Event();
-                        clientes++;
                         break;
                     case Evento.TipoEvento.FinQuitarAlfombras:
                         e_actual.FinQuitarAlfombras_Event();
@@ -116,61 +120,15 @@ namespace TP7SIM.Logica
                     case Evento.TipoEvento.FinPonerAlfombras:
                         e_actual.FinPonerAlfombras_Event();
                         break;
-                    /*
-
-                        if (nuevoDia)
-                        {
-                            if (form.rbn_Cada1000.Checked == true && (diasSimulados % 1000 == 0 || diasSimulados == MySettings.DiasSimulacion))
-                            {
-                                form.MostrarEnGrilla(e_actual);
-                            };
-
-                            diasSimulados++;
-
-                            if (form.rbn_Cada1000.Checked == true && (diasSimulados % 1000 == 0 || diasSimulados == MySettings.DiasSimulacion - 1))
-                            {
-                                form.AgregarEspaciado("Dia: " + diasSimulados.ToString());
-                            }
-                        };
-
-
-                        break;
-                    case Evento.TipoEvento.InicioTurno:
-                        e_actual.InicioTurno_Event(diasSimulados);
-                        break;*/
                 }
-
-                //diasSimulados++; //TODO: Esta linea no deberia esta ren la version final, se conserva solo a fines de testing
-
-                
                 e_anterior = e_actual;
-                /*
-                if (form.rbn_DiaParticular.Checked == true)
-                {
-                    if (DiaAMostrar == 0)
-                    {
-                        form.MostrarEnGrilla(e_actual);
-                    }
-                    else
-                    {
-                        int horaDesde = Int32.Parse(form.txt_HoraDesde.Text);
-                        if (DiaAMostrar - 1 == diasSimulados && e_actual.Reloj.Hour >= horaDesde)
-                        {
-                            form.MostrarEnGrilla(e_actual);
-                        }
+                form.progressbar.Value = eventos;
 
-                    }
-                }
-                else
+                if (eventos >= MySettings.desde && eventos <= MySettings.hasta)
                 {
-                    if (diasSimulados % 1000 == 0 || diasSimulados == MySettings.DiasSimulacion - 1)
-                    {
-                        form.MostrarEnGrilla(e_actual);
-                    }
+                    form.MostrarEnGrilla(e_actual);
                 }
-                form.progressbar.Value = diasSimulados;*/
             }
-
             form.PintarCeldas();
         }
 
@@ -178,36 +136,36 @@ namespace TP7SIM.Logica
         {
             var evAnterior = evActual.EventoAnterior;
             var earliest = evActual.Reloj;//la fecha determinada por el metodo anterior
-            
+          
 
             int iteracion = 0;
-            while (true)
-            {
+            /*while (true)
+            {*/
                 evActual.Reloj = earliest = DeterminarTiempoReloj(evActual);
-                if (evAnterior._LLegada.FechaProximaLlegada == earliest) return Evento.TipoEvento.LlegadaCliente;
-                if (evAnterior.EmpleadoQA.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinQuitarAlfombras;
-                if (evAnterior.EmpleadoLavado1.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinLavado1;
-                if (evAnterior.EmpleadoLavado2.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinLavado2;
-                if (evAnterior.EmpleadoSecado.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinSecado;
-                if (evAnterior.EmpleadoSecado.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinSecado;
-                if (evAnterior.EmpleadoPA.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinPonerAlfombras;
-                
-                Console.Write("");
-            }
+            //Console.WriteLine("Earliest" + earliest);
+            if (evAnterior._LLegada.FechaProximaLlegada == earliest) return Evento.TipoEvento.LlegadaCliente;
+            if (evAnterior.EmpleadoQA.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinQuitarAlfombras;
+            if (evAnterior.EmpleadoLavado1.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinLavado1;
+            if (evAnterior.EmpleadoLavado2.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinLavado2;
+            if (evAnterior.EmpleadoSecado.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinSecado;
+            if (evAnterior.EmpleadoAA.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinAspirado;
+            if (evAnterior.EmpleadoPA.FechaProximoFinAtencion == earliest) return Evento.TipoEvento.FinPonerAlfombras;
 
+            //Console.Write("");
+            //}
+     
             return Evento.TipoEvento.EventoNoRegistrado;
         }
 
         private static DateTime DeterminarTiempoReloj(Evento ev)
         {
-
+     
             DateTime proxLlegada;
             proxLlegada = ev._LLegada.FechaProximaLlegada;
-
+        
 
             var arr = new List<DateTime>
             {
-
                 ev.EmpleadoQA.FechaProximoFinAtencion,
                 ev.EmpleadoAA.FechaProximoFinAtencion,
                 ev.EmpleadoPA.FechaProximoFinAtencion,
@@ -216,14 +174,25 @@ namespace TP7SIM.Logica
                 ev.EmpleadoSecado.FechaProximoFinAtencion,
                 proxLlegada
             };
+            var arr2 = new List<DateTime>();
+            
+            /*for (int i = 0; i < arr.Count; i++)
+            {
+                Console.WriteLine("---- " + arr[i]);
+            }*/
 
-            var fechaMinima = arr.Min();
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (arr[i] != DateTime.MinValue) arr2.Add(arr[i]);
+            }
 
+            var fechaMinima = arr2.Min();
+            /*
             while (fechaMinima <= ev.Reloj)
             {
                 //la fecha fue menor a el reloj anterior
                 arr.Remove(fechaMinima);
-
+           
                 if (arr.Count == 0)
                 {
                     //es un cierre
@@ -235,9 +204,9 @@ namespace TP7SIM.Logica
 
 
             if (fechaMinima == DateTime.MaxValue) throw new Exception("El reloj no deberia tener una fecha maxima...");
-            if (fechaMinima == DateTime.MinValue) throw new Exception("El reloj no deberia tener una fecha minima...");
+            if (fechaMinima == DateTime.MinValue) throw new Exception("El reloj no deberia tener una fecha minima...");*/
 
             return fechaMinima;
         }
     }
-}
+} 

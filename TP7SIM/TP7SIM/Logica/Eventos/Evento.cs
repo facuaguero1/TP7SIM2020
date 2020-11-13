@@ -74,12 +74,60 @@ namespace TP7SIM.Logica.Eventos
                 FechaProximaLlegada = ea._LLegada.FechaProximaLlegada
             };
             if (ea.ProximoCliente <= MySettings.CantMaxClientes) { ProximoCliente = ea.ProximoCliente; }
+
+           
+            ProximoCliente = ea.ProximoCliente;
+
+            ColaQuitarAlfombra = new List<Auto>(ea.ColaQuitarAlfombra);
+            ColaAspirarAlfombra = new List<Alfombra>(ea.ColaAspirarAlfombra);
+            ColaLavado = new List<Auto>(ea.ColaLavado);
+            ColaSecado = new List<Auto>(ea.ColaSecado);
+            ColaPonerAlfombra = new List<Auto>(ea.ColaPonerAlfombra);
+            ColaAlfombrasListas = new Hashtable(ea.ColaAlfombrasListas);
+
+            EmpleadoQA = new QuitarAlfombras()
+            {
+                Estado = ea.EmpleadoQA.Estado,
+                FechaProximoFinAtencion = ea.EmpleadoQA.FechaProximoFinAtencion,
+                AutoActual = ea.EmpleadoQA.AutoActual
+            };
+            EmpleadoAA = new AspirarAlfombras()
+            {
+                Estado = ea.EmpleadoAA.Estado,
+                FechaProximoFinAtencion = ea.EmpleadoAA.FechaProximoFinAtencion,
+                AlfombraActual = ea.EmpleadoAA.AlfombraActual
+            };
+            EmpleadoLavado1 = new Lavado()
+            {
+                Estado = ea.EmpleadoLavado1.Estado,
+                FechaProximoFinAtencion = ea.EmpleadoLavado1.FechaProximoFinAtencion,
+                AutoActual = ea.EmpleadoLavado1.AutoActual
+            };
+            EmpleadoLavado2 = new Lavado()
+            {
+                Estado = ea.EmpleadoLavado2.Estado,
+                FechaProximoFinAtencion = ea.EmpleadoLavado2.FechaProximoFinAtencion,
+                AutoActual = ea.EmpleadoLavado2.AutoActual
+            };
+            EmpleadoSecado = new Secado()
+            {
+                Estado = ea.EmpleadoSecado.Estado,
+                FechaProximoFinAtencion = ea.EmpleadoSecado.FechaProximoFinAtencion,
+                AutoActual = ea.EmpleadoSecado.AutoActual
+            };
+            EmpleadoPA = new PonerAlfombras()
+            {
+                Estado = ea.EmpleadoPA.Estado,
+                FechaProximoFinAtencion = ea.EmpleadoPA.FechaProximoFinAtencion,
+                AutoActual = ea.EmpleadoPA.AutoActual
+            };
+
         }
 
         public void LlegadaCliente_Event()
         {
             var llegadaNueva = new Llegada();
-            llegadaNueva.CalcularProximaLlegada(Reloj);
+            
             _LLegada = llegadaNueva;
             
 
@@ -89,6 +137,13 @@ namespace TP7SIM.Logica.Eventos
             if (EventoAnterior.ProximoCliente < MySettings.CantMaxClientes)
             {
                 ProximoCliente = EventoAnterior.ProximoCliente + 1;
+                llegadaNueva.CalcularProximaLlegada(Reloj);
+            }
+            else
+            {
+                ProximoCliente = 0;
+                llegadaNueva.TiempoEntreLlegadas = TimeSpan.Zero;
+                llegadaNueva.FechaProximaLlegada = DateTime.MinValue;
             }
 
             _Auto = nAuto;
@@ -176,6 +231,7 @@ namespace TP7SIM.Logica.Eventos
         public void FinLavado_Event(Lavado empleado)
         {
             _Auto = empleado.AutoActual;
+            empleado.FechaProximoFinAtencion = DateTime.MinValue;
             if (EmpleadoSecado.Estado == EstadoArea.Ocupado)
             {
                 ColaSecado.Add(empleado.AutoActual);
@@ -190,7 +246,7 @@ namespace TP7SIM.Logica.Eventos
         {
             _Auto = EmpleadoSecado.AutoActual;
             //La liberación de una estación de lavado se da recién cuando finaliza el secado
-            if (EmpleadoSecado.AutoActual.NroAuto == EmpleadoLavado1.AutoActual.NroAuto)
+            if (EmpleadoLavado1.AutoActual != null && EmpleadoSecado.AutoActual.NroAuto == EmpleadoLavado1.AutoActual.NroAuto)
             {
                 AdministrarEmpleado_FinSecado(EmpleadoLavado1);
             }

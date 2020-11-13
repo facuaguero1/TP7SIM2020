@@ -17,6 +17,10 @@ namespace TP7SIM.Logica.Helper
         //Minutos por llegada de cliente
         public static double MediaLlegadas { get; set; }
 
+        //Rango de eventos que se mostrara
+        public static int desde { get; set; }
+
+        public static int hasta { get; set; }
 
         //Tiempos las areas de tiempo constante
 

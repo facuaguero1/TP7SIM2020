@@ -25,9 +25,6 @@ namespace TP7SIM.Logica.Areas
             {
                 Estado = EstadoArea.Libre;
                 TiempoDeAtencion = TimeSpan.Zero;
-                //UltimaPreparacion = ProximoFinPreparacion.Value;
-                //ProximoFinPreparacion = setearlo null;
-                //PedidoActual = null;
             }
             else
             {

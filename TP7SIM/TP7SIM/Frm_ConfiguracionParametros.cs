@@ -40,7 +40,7 @@ namespace TP7SIM
         internal void btn_ConfirmarParametros_Click(object sender, EventArgs e)
         {
             MySettings.CantMaxClientes = Convert.ToInt32(txtMaxClientes.Text);
-            MySettings.MediaLlegadas = Convert.ToDouble(txtMediaLlegadas.Text, CultureInfo.InvariantCulture);
+            MySettings.MediaLlegadas = double.Parse(txtMediaLlegadas.Text, CultureInfo.InvariantCulture);
             MySettings.TiempoQuitarAlfombras = Convert.ToDouble(txtQA.Text, CultureInfo.InvariantCulture);
             MySettings.Distribuciones.UniformeAspirado.a = Convert.ToDouble(txtAA_A.Text, CultureInfo.InvariantCulture);
             MySettings.Distribuciones.UniformeAspirado.b = Convert.ToDouble(txtAA_B.Text, CultureInfo.InvariantCulture);

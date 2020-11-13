@@ -29,20 +29,29 @@ namespace TP7SIM.Logica.Areas
             else
             {
                 AutoActual = auto;
+                //Console.WriteLine("NUMERO DE AUTO EN PONER ALFOMBRA: " + auto.NroAuto.ToString());
 
-                if (!eActual.ColaAlfombrasListas.ContainsKey(auto.NroAuto))
+                /*try
+                {*/
+                    if (!eActual.ColaAlfombrasListas.ContainsKey(auto.NroAuto))
+                    {
+                        Estado = EstadoArea.EnEspera;
+                        TiempoDeAtencion = TimeSpan.Zero;
+                        FechaProximoFinAtencion = DateTime.MinValue;
+                    }
+                    else
+                    {
+                        Estado = EstadoArea.Ocupado;
+                        FechaProximoFinAtencion = reloj.AddHours(MySettings.TiempoPonerAlfombras / 60).AddMilliseconds(37);
+                        TiempoDeAtencion = MySettings.RoundTimeSpan(0, FechaProximoFinAtencion - reloj);
+                        AutoActual._Alfombra = (Alfombra)eActual.ColaAlfombrasListas[AutoActual.NroAuto];
+                    }
+                /*}
+                catch (NullReferenceException)
                 {
-                    Estado = EstadoArea.EnEspera;
-                    TiempoDeAtencion = TimeSpan.Zero;
-                    FechaProximoFinAtencion = DateTime.MinValue;
-                }
-                else
-                {
-
-                    Estado = EstadoArea.Ocupado;
-                    FechaProximoFinAtencion = reloj.AddHours(MySettings.TiempoPonerAlfombras / 60).AddMilliseconds(37);
-                    TiempoDeAtencion = MySettings.RoundTimeSpan(0, FechaProximoFinAtencion - reloj);
-                }
+                    Console.WriteLine("Nro AUTO excepcion: " + auto.NroAuto.ToString());
+                    Console.WriteLine("No pienso hacer nada respecto a esto.");
+                }*/
                 
             }
         }
@@ -52,6 +61,7 @@ namespace TP7SIM.Logica.Areas
             Estado = EstadoArea.Ocupado;
             FechaProximoFinAtencion = reloj.AddHours(MySettings.TiempoPonerAlfombras / 60).AddMilliseconds(37);
             TiempoDeAtencion = MySettings.RoundTimeSpan(0, FechaProximoFinAtencion - reloj);
+            AutoActual._Alfombra = alfombra;
         }
 
         public void Liberar()

@@ -81,7 +81,13 @@
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TiempoAtencionPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProxFinAtencionPA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtDesde = new System.Windows.Forms.TextBox();
+            this.txtHasta = new System.Windows.Forms.TextBox();
+            this.lblDesde = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -106,9 +112,9 @@
             // 
             // btnIniciarSimulacion
             // 
-            this.btnIniciarSimulacion.Location = new System.Drawing.Point(606, 373);
+            this.btnIniciarSimulacion.Location = new System.Drawing.Point(612, 373);
             this.btnIniciarSimulacion.Name = "btnIniciarSimulacion";
-            this.btnIniciarSimulacion.Size = new System.Drawing.Size(169, 47);
+            this.btnIniciarSimulacion.Size = new System.Drawing.Size(169, 41);
             this.btnIniciarSimulacion.TabIndex = 3;
             this.btnIniciarSimulacion.Text = "Iniciar simulación";
             this.btnIniciarSimulacion.UseVisualStyleBackColor = true;
@@ -116,7 +122,7 @@
             // 
             // progressbar
             // 
-            this.progressbar.Location = new System.Drawing.Point(275, 398);
+            this.progressbar.Location = new System.Drawing.Point(545, 420);
             this.progressbar.Name = "progressbar";
             this.progressbar.Size = new System.Drawing.Size(282, 16);
             this.progressbar.TabIndex = 4;
@@ -179,7 +185,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(805, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(805, 360);
             this.dataGridView1.TabIndex = 5;
             // 
             // NroEvento
@@ -187,7 +193,6 @@
             this.NroEvento.HeaderText = "Nro Evento";
             this.NroEvento.MinimumWidth = 6;
             this.NroEvento.Name = "NroEvento";
-            this.NroEvento.ReadOnly = true;
             this.NroEvento.Width = 125;
             // 
             // Evento
@@ -195,7 +200,6 @@
             this.Evento.HeaderText = "Evento";
             this.Evento.MinimumWidth = 6;
             this.Evento.Name = "Evento";
-            this.Evento.ReadOnly = true;
             this.Evento.Width = 150;
             // 
             // Reloj
@@ -203,7 +207,6 @@
             this.Reloj.HeaderText = "Reloj";
             this.Reloj.MinimumWidth = 6;
             this.Reloj.Name = "Reloj";
-            this.Reloj.ReadOnly = true;
             this.Reloj.Width = 125;
             // 
             // Column1
@@ -212,7 +215,6 @@
             this.Column1.HeaderText = "";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             this.Column1.Width = 20;
             // 
             // TEntreLlegadas
@@ -220,7 +222,6 @@
             this.TEntreLlegadas.HeaderText = "T. Entre Llegadas";
             this.TEntreLlegadas.MinimumWidth = 6;
             this.TEntreLlegadas.Name = "TEntreLlegadas";
-            this.TEntreLlegadas.ReadOnly = true;
             this.TEntreLlegadas.Width = 125;
             // 
             // ProxLlegada
@@ -228,7 +229,6 @@
             this.ProxLlegada.HeaderText = "Próxima Llegada";
             this.ProxLlegada.MinimumWidth = 6;
             this.ProxLlegada.Name = "ProxLlegada";
-            this.ProxLlegada.ReadOnly = true;
             this.ProxLlegada.Width = 125;
             // 
             // Column2
@@ -237,7 +237,6 @@
             this.Column2.HeaderText = "";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             this.Column2.Width = 20;
             // 
             // NroAuto
@@ -245,7 +244,6 @@
             this.NroAuto.HeaderText = "Nro Auto";
             this.NroAuto.MinimumWidth = 6;
             this.NroAuto.Name = "NroAuto";
-            this.NroAuto.ReadOnly = true;
             this.NroAuto.Width = 125;
             // 
             // Column3
@@ -254,7 +252,6 @@
             this.Column3.HeaderText = "";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
             this.Column3.Width = 20;
             // 
             // TamColaQA
@@ -262,7 +259,6 @@
             this.TamColaQA.HeaderText = "Tamaño Cola QA";
             this.TamColaQA.MinimumWidth = 6;
             this.TamColaQA.Name = "TamColaQA";
-            this.TamColaQA.ReadOnly = true;
             this.TamColaQA.Width = 125;
             // 
             // ColaQA
@@ -270,7 +266,6 @@
             this.ColaQA.HeaderText = "Cola Quitar Alfombras";
             this.ColaQA.MinimumWidth = 6;
             this.ColaQA.Name = "ColaQA";
-            this.ColaQA.ReadOnly = true;
             this.ColaQA.Width = 125;
             // 
             // Column4
@@ -279,7 +274,6 @@
             this.Column4.HeaderText = "";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             this.Column4.Width = 20;
             // 
             // EstadoQA
@@ -287,7 +281,6 @@
             this.EstadoQA.HeaderText = "Estado QA";
             this.EstadoQA.MinimumWidth = 6;
             this.EstadoQA.Name = "EstadoQA";
-            this.EstadoQA.ReadOnly = true;
             this.EstadoQA.Width = 125;
             // 
             // TiempoAtencionQA
@@ -295,7 +288,6 @@
             this.TiempoAtencionQA.HeaderText = "Tiempo de Atención";
             this.TiempoAtencionQA.MinimumWidth = 6;
             this.TiempoAtencionQA.Name = "TiempoAtencionQA";
-            this.TiempoAtencionQA.ReadOnly = true;
             this.TiempoAtencionQA.Width = 125;
             // 
             // ProxFinAtencionQA
@@ -303,7 +295,6 @@
             this.ProxFinAtencionQA.HeaderText = "Prox. Fin Atención";
             this.ProxFinAtencionQA.MinimumWidth = 6;
             this.ProxFinAtencionQA.Name = "ProxFinAtencionQA";
-            this.ProxFinAtencionQA.ReadOnly = true;
             this.ProxFinAtencionQA.Width = 125;
             // 
             // Column5
@@ -312,7 +303,6 @@
             this.Column5.HeaderText = "";
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
             this.Column5.Width = 20;
             // 
             // TamColaLavado
@@ -320,7 +310,6 @@
             this.TamColaLavado.HeaderText = "Tamaño Cola Lavado";
             this.TamColaLavado.MinimumWidth = 6;
             this.TamColaLavado.Name = "TamColaLavado";
-            this.TamColaLavado.ReadOnly = true;
             this.TamColaLavado.Width = 125;
             // 
             // ColaLavado
@@ -328,7 +317,6 @@
             this.ColaLavado.HeaderText = "Cola Lavado";
             this.ColaLavado.MinimumWidth = 6;
             this.ColaLavado.Name = "ColaLavado";
-            this.ColaLavado.ReadOnly = true;
             this.ColaLavado.Width = 125;
             // 
             // Column6
@@ -337,7 +325,6 @@
             this.Column6.HeaderText = "";
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             this.Column6.Width = 20;
             // 
             // EstadoLavado1
@@ -345,7 +332,6 @@
             this.EstadoLavado1.HeaderText = "Estado Lavado 1";
             this.EstadoLavado1.MinimumWidth = 6;
             this.EstadoLavado1.Name = "EstadoLavado1";
-            this.EstadoLavado1.ReadOnly = true;
             this.EstadoLavado1.Width = 125;
             // 
             // TiempoAtencionLavado1
@@ -353,7 +339,6 @@
             this.TiempoAtencionLavado1.HeaderText = "Tiempo de Atención";
             this.TiempoAtencionLavado1.MinimumWidth = 6;
             this.TiempoAtencionLavado1.Name = "TiempoAtencionLavado1";
-            this.TiempoAtencionLavado1.ReadOnly = true;
             this.TiempoAtencionLavado1.Width = 125;
             // 
             // ProxFinAtencionLavado1
@@ -361,7 +346,6 @@
             this.ProxFinAtencionLavado1.HeaderText = "Prox. Fin Atención";
             this.ProxFinAtencionLavado1.MinimumWidth = 6;
             this.ProxFinAtencionLavado1.Name = "ProxFinAtencionLavado1";
-            this.ProxFinAtencionLavado1.ReadOnly = true;
             this.ProxFinAtencionLavado1.Width = 125;
             // 
             // Column7
@@ -370,7 +354,6 @@
             this.Column7.HeaderText = "";
             this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             this.Column7.Width = 20;
             // 
             // EstadoLavado2
@@ -378,7 +361,6 @@
             this.EstadoLavado2.HeaderText = "Estado Lavado 2";
             this.EstadoLavado2.MinimumWidth = 6;
             this.EstadoLavado2.Name = "EstadoLavado2";
-            this.EstadoLavado2.ReadOnly = true;
             this.EstadoLavado2.Width = 125;
             // 
             // TiempoAtencionLavado2
@@ -386,7 +368,6 @@
             this.TiempoAtencionLavado2.HeaderText = "Tiempo de Atención";
             this.TiempoAtencionLavado2.MinimumWidth = 6;
             this.TiempoAtencionLavado2.Name = "TiempoAtencionLavado2";
-            this.TiempoAtencionLavado2.ReadOnly = true;
             this.TiempoAtencionLavado2.Width = 125;
             // 
             // ProxFinAtencionLavado2
@@ -394,7 +375,6 @@
             this.ProxFinAtencionLavado2.HeaderText = "Prox. Fin Atención";
             this.ProxFinAtencionLavado2.MinimumWidth = 6;
             this.ProxFinAtencionLavado2.Name = "ProxFinAtencionLavado2";
-            this.ProxFinAtencionLavado2.ReadOnly = true;
             this.ProxFinAtencionLavado2.Width = 125;
             // 
             // Column9
@@ -403,7 +383,6 @@
             this.Column9.HeaderText = "";
             this.Column9.MinimumWidth = 6;
             this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
             this.Column9.Width = 20;
             // 
             // TamColaSecado
@@ -411,7 +390,6 @@
             this.TamColaSecado.HeaderText = "Tam. Cola Secado";
             this.TamColaSecado.MinimumWidth = 6;
             this.TamColaSecado.Name = "TamColaSecado";
-            this.TamColaSecado.ReadOnly = true;
             this.TamColaSecado.Width = 125;
             // 
             // ColaSecado
@@ -507,7 +485,6 @@
             this.Column21.HeaderText = "";
             this.Column21.MinimumWidth = 6;
             this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
             this.Column21.Width = 20;
             // 
             // TamColaPA
@@ -515,7 +492,6 @@
             this.TamColaPA.HeaderText = "Tam. Cola PA";
             this.TamColaPA.MinimumWidth = 6;
             this.TamColaPA.Name = "TamColaPA";
-            this.TamColaPA.ReadOnly = true;
             this.TamColaPA.Width = 125;
             // 
             // ColaPA
@@ -523,7 +499,6 @@
             this.ColaPA.HeaderText = "Cola Poner Alfombras";
             this.ColaPA.MinimumWidth = 6;
             this.ColaPA.Name = "ColaPA";
-            this.ColaPA.ReadOnly = true;
             this.ColaPA.Width = 125;
             // 
             // AlfombrasListas
@@ -531,7 +506,6 @@
             this.AlfombrasListas.HeaderText = "Alfombras Listas";
             this.AlfombrasListas.MinimumWidth = 6;
             this.AlfombrasListas.Name = "AlfombrasListas";
-            this.AlfombrasListas.ReadOnly = true;
             this.AlfombrasListas.Width = 125;
             // 
             // Column25
@@ -540,7 +514,6 @@
             this.Column25.HeaderText = "";
             this.Column25.MinimumWidth = 6;
             this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
             this.Column25.Width = 20;
             // 
             // Column31
@@ -548,7 +521,6 @@
             this.Column31.HeaderText = "Estado PA";
             this.Column31.MinimumWidth = 6;
             this.Column31.Name = "Column31";
-            this.Column31.ReadOnly = true;
             this.Column31.Width = 125;
             // 
             // TiempoAtencionPA
@@ -556,7 +528,6 @@
             this.TiempoAtencionPA.HeaderText = "Tiempo de Atención";
             this.TiempoAtencionPA.MinimumWidth = 6;
             this.TiempoAtencionPA.Name = "TiempoAtencionPA";
-            this.TiempoAtencionPA.ReadOnly = true;
             this.TiempoAtencionPA.Width = 125;
             // 
             // ProxFinAtencionPA
@@ -564,14 +535,61 @@
             this.ProxFinAtencionPA.HeaderText = "Prox. Fin Atención PA";
             this.ProxFinAtencionPA.MinimumWidth = 6;
             this.ProxFinAtencionPA.Name = "ProxFinAtencionPA";
-            this.ProxFinAtencionPA.ReadOnly = true;
             this.ProxFinAtencionPA.Width = 125;
+            // 
+            // txtDesde
+            // 
+            this.txtDesde.Location = new System.Drawing.Point(53, 20);
+            this.txtDesde.Name = "txtDesde";
+            this.txtDesde.Size = new System.Drawing.Size(84, 20);
+            this.txtDesde.TabIndex = 6;
+            this.txtDesde.Text = "0";
+            // 
+            // txtHasta
+            // 
+            this.txtHasta.Location = new System.Drawing.Point(192, 20);
+            this.txtHasta.Name = "txtHasta";
+            this.txtHasta.Size = new System.Drawing.Size(84, 20);
+            this.txtHasta.TabIndex = 7;
+            this.txtHasta.Text = "7";
+            // 
+            // lblDesde
+            // 
+            this.lblDesde.AutoSize = true;
+            this.lblDesde.Location = new System.Drawing.Point(6, 23);
+            this.lblDesde.Name = "lblDesde";
+            this.lblDesde.Size = new System.Drawing.Size(41, 13);
+            this.lblDesde.TabIndex = 8;
+            this.lblDesde.Text = "Desde:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(148, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Hasta:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtHasta);
+            this.groupBox1.Controls.Add(this.lblDesde);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtDesde);
+            this.groupBox1.Location = new System.Drawing.Point(245, 380);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(282, 56);
+            this.groupBox1.TabIndex = 10;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Mostrar rango de eventos";
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 426);
+            this.ClientSize = new System.Drawing.Size(829, 442);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.progressbar);
             this.Controls.Add(this.btnIniciarSimulacion);
@@ -580,6 +598,8 @@
             this.Name = "Principal";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -638,6 +658,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
         private System.Windows.Forms.DataGridViewTextBoxColumn TiempoAtencionPA;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProxFinAtencionPA;
+        private System.Windows.Forms.TextBox txtDesde;
+        private System.Windows.Forms.TextBox txtHasta;
+        private System.Windows.Forms.Label lblDesde;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
