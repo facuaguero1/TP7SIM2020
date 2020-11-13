@@ -10,7 +10,7 @@ namespace TP7SIM.Logica.Autos
     {
         public Auto(DateTime reloj, int nroAuto)
         {
-            FechaLlegada = reloj;
+            //FechaLlegada = reloj;
             NroAuto = nroAuto;
             _Alfombra = new Alfombra(nroAuto);
         }

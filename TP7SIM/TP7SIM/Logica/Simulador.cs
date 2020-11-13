@@ -87,7 +87,7 @@ namespace TP7SIM.Logica
             {
                 eventos++;
                 //Console.WriteLine("Cantidad de eventos: " +  eventos);
-                if(eventos % 500 == 0) System.GC.Collect();
+                //if(eventos % 500 == 0) System.GC.Collect();
                 var e_actual = new Evento(e_anterior);
                 e_actual.EventoAnterior = e_anterior;
                 //determinamos el nro de evento
@@ -123,7 +123,7 @@ namespace TP7SIM.Logica
                 }
                 e_anterior = e_actual;
                 form.progressbar.Value = eventos;
-
+                
                 if (eventos >= MySettings.desde && eventos <= MySettings.hasta)
                 {
                     form.MostrarEnGrilla(e_actual);

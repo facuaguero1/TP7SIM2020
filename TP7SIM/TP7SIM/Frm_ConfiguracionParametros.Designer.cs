@@ -308,7 +308,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Frm_ConfiguracionParametros";
-            this.Text = "Frm_ConfiguracionParametros";
+            this.Text = "Configuración de parámetros";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
