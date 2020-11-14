@@ -9,7 +9,7 @@ namespace TP7SIM.Logica.Helper
     class MySettings
     {
         //Horario de inicio de la simulacion
-        public static DateTime HorarioInicio => DateTime.Parse("11/11/2020 00:00");
+        public static DateTime HorarioInicio => DateTime.Parse("18/11/2020 00:00");
 
         //Cantidad maxima de clientes
         public static int CantMaxClientes { get; set; }

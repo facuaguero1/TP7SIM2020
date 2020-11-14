@@ -51,6 +51,7 @@
             this.txtHEcDif = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnProcEcDif = new System.Windows.Forms.Button();
             this.btnValoresPorDefecto = new System.Windows.Forms.Button();
             this.btn_ConfirmarParametros = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -251,7 +252,7 @@
             // 
             // txtHEcDif
             // 
-            this.txtHEcDif.Location = new System.Drawing.Point(57, 44);
+            this.txtHEcDif.Location = new System.Drawing.Point(36, 44);
             this.txtHEcDif.Mask = "#,##";
             this.txtHEcDif.Name = "txtHEcDif";
             this.txtHEcDif.Size = new System.Drawing.Size(66, 20);
@@ -260,7 +261,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(38, 47);
+            this.label9.Location = new System.Drawing.Point(16, 47);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(13, 13);
             this.label9.TabIndex = 4;
@@ -268,6 +269,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnProcEcDif);
             this.groupBox5.Controls.Add(this.txtHEcDif);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Location = new System.Drawing.Point(28, 129);
@@ -276,6 +278,16 @@
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Ecuación diferencial de secado";
+            // 
+            // btnProcEcDif
+            // 
+            this.btnProcEcDif.Location = new System.Drawing.Point(121, 33);
+            this.btnProcEcDif.Name = "btnProcEcDif";
+            this.btnProcEcDif.Size = new System.Drawing.Size(113, 37);
+            this.btnProcEcDif.TabIndex = 8;
+            this.btnProcEcDif.Text = "Procedimiento de la ecuación diferencial";
+            this.btnProcEcDif.UseVisualStyleBackColor = true;
+            this.btnProcEcDif.Click += new System.EventHandler(this.btnProcEcDif_Click);
             // 
             // btnValoresPorDefecto
             // 
@@ -308,6 +320,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Frm_ConfiguracionParametros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Configuración de parámetros";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -350,5 +363,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnValoresPorDefecto;
         private System.Windows.Forms.Button btn_ConfirmarParametros;
+        private System.Windows.Forms.Button btnProcEcDif;
     }
 }

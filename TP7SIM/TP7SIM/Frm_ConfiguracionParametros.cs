@@ -18,13 +18,13 @@ namespace TP7SIM
         {
             InitializeComponent();
             txtMaxClientes.Text = MySettings.CantMaxClientes.ToString();
-            txtMediaLlegadas.Text = MySettings.MediaLlegadas.ToString("0.00");
-            txtQA.Text = MySettings.TiempoQuitarAlfombras.ToString("0.00");
-            txtAA_A.Text = MySettings.Distribuciones.UniformeAspirado.a.ToString("0.00");
-            txtAA_B.Text = MySettings.Distribuciones.UniformeAspirado.b.ToString("0.00");
-            txtL_A.Text = MySettings.Distribuciones.UniformeLavado.a.ToString("0.00");
-            txtL_B.Text = MySettings.Distribuciones.UniformeLavado.b.ToString("0.00");
-            txtPA.Text = MySettings.TiempoPonerAlfombras.ToString("0.00");
+            txtMediaLlegadas.Text = MySettings.MediaLlegadas.ToString("00.00");
+            txtQA.Text = MySettings.TiempoQuitarAlfombras.ToString("00.00");
+            txtAA_A.Text = MySettings.Distribuciones.UniformeAspirado.a.ToString("00.00");
+            txtAA_B.Text = MySettings.Distribuciones.UniformeAspirado.b.ToString("00.00");
+            txtL_A.Text = MySettings.Distribuciones.UniformeLavado.a.ToString("00.00");
+            txtL_B.Text = MySettings.Distribuciones.UniformeLavado.b.ToString("00.00");
+            txtPA.Text = MySettings.TiempoPonerAlfombras.ToString("00.00");
             txtHEcDif.Text = MySettings.HEcDifSecado.ToString("0.00");
         }
 
@@ -59,6 +59,12 @@ namespace TP7SIM
             MySettings.HEcDifSecado = Convert.ToDouble(txtHEcDif.Text, CultureInfo.InvariantCulture);
 
             this.Close();
+        }
+
+        private void btnProcEcDif_Click(object sender, EventArgs e)
+        {
+            Frm_EcDif formED = new Frm_EcDif();
+            formED.ShowDialog();
         }
     }
 }

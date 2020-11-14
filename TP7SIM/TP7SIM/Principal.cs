@@ -66,17 +66,23 @@ namespace TP7SIM
                         color = Color.PapayaWhip;
                         break;
                     case "FinQuitarAlfombras":
-                        color = Color.LightSeaGreen;
+                        color = Color.Tan;
+                        break;
+                    case "FinAspirado":
+                        color = Color.Silver;
                         break;
                     case "FinPonerAlfombras":
-                        color = Color.Green;
+                        color = Color.PaleGreen;
                         break;
                     case "FinLavado1":
                     case "FinLavado2":
-                        color = Color.Khaki;
+                        color = Color.Turquoise;
+                        break;
+                    case "FinSecado":
+                        color = Color.LightSalmon;
                         break;
                     case "Inicio":
-                        color = Color.HotPink;
+                        color = Color.White;
                         break;
 
                     default:

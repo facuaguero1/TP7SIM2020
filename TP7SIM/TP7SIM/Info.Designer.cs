@@ -63,7 +63,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(226, 20);
             this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "Fecha de entrega: 11 de Noviembre de 2020";
+            this.textBox3.Text = "Fecha de entrega: 18 de Noviembre de 2020";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
@@ -86,6 +86,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Info";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Info";
             this.ResumeLayout(false);
             this.PerformLayout();
