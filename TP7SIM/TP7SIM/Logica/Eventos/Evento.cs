@@ -78,12 +78,20 @@ namespace TP7SIM.Logica.Eventos
            
             ProximoCliente = ea.ProximoCliente;
 
+            /*
             ColaQuitarAlfombra = new List<Auto>(ea.ColaQuitarAlfombra);
             ColaAspirarAlfombra = new List<Alfombra>(ea.ColaAspirarAlfombra);
             ColaLavado = new List<Auto>(ea.ColaLavado);
             ColaSecado = new List<Auto>(ea.ColaSecado);
             ColaPonerAlfombra = new List<Auto>(ea.ColaPonerAlfombra);
             ColaAlfombrasListas = new Hashtable(ea.ColaAlfombrasListas);
+            */
+            ColaQuitarAlfombra = ea.ColaQuitarAlfombra;
+            ColaAspirarAlfombra = ea.ColaAspirarAlfombra;
+            ColaLavado = ea.ColaLavado;
+            ColaSecado = ea.ColaSecado;
+            ColaPonerAlfombra = ea.ColaPonerAlfombra;
+            ColaAlfombrasListas = ea.ColaAlfombrasListas;
 
             EmpleadoQA = new QuitarAlfombras()
             {
