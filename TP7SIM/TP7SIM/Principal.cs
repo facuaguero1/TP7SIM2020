@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -90,8 +91,8 @@ namespace TP7SIM
         internal void MostrarEnGrilla(Evento e_actual)
         {
             dataGridView1.Rows.Add(
-                e_actual.NroEvento, e_actual.Tipo, e_actual.Reloj.ToString("dd/MM - HH:mm:ss"), "",
-                ta(e_actual._LLegada.TiempoEntreLlegadas), e_actual._LLegada.FechaProximaLlegada.ToString("dd/MM - HH:mm:ss"), "",
+                e_actual.NroEvento, e_actual.Tipo, date(e_actual.Reloj), "",
+                ta(e_actual._LLegada.TiempoEntreLlegadas), date(e_actual._LLegada.FechaProximaLlegada), "",
                 e_actual._Auto.NroAuto, "",
                 e_actual.ColaQuitarAlfombra.Count, printCola(e_actual.ColaQuitarAlfombra), "",
                 e_actual.EmpleadoQA.Estado, s(e_actual.EmpleadoQA.AutoActual), ta(e_actual.EmpleadoQA.TiempoDeAtencion), date(e_actual.EmpleadoQA.FechaProximoFinAtencion), "",
@@ -102,12 +103,23 @@ namespace TP7SIM
                 e_actual.EmpleadoSecado.Estado, s(e_actual.EmpleadoSecado.AutoActual), ta(e_actual.EmpleadoSecado.TiempoDeAtencion), date(e_actual.EmpleadoSecado.FechaProximoFinAtencion), "",
                 e_actual.ColaAspirarAlfombra.Count, printCola(e_actual.ColaAspirarAlfombra), "",
                 e_actual.EmpleadoAA.Estado, s(e_actual.EmpleadoAA.AlfombraActual), ta(e_actual.EmpleadoAA.TiempoDeAtencion), date(e_actual.EmpleadoAA.FechaProximoFinAtencion), "",
-                e_actual.ColaPonerAlfombra.Count, printCola(e_actual.ColaPonerAlfombra), AlfombrasListas.ToString(), "",
+                e_actual.ColaPonerAlfombra.Count, printCola(e_actual.ColaPonerAlfombra), printCola(ht2l(e_actual.ColaAlfombrasListas)), "",
                 e_actual.EmpleadoPA.Estado, s(e_actual.EmpleadoPA.AutoActual), ta(e_actual.EmpleadoPA.TiempoDeAtencion), date(e_actual.EmpleadoPA.FechaProximoFinAtencion), ""
             );
         }
 
-    
+        private static List<Alfombra> ht2l(Hashtable ht)
+        {
+            var list = new List<Alfombra>();
+            foreach (DictionaryEntry pair in ht)
+            {
+                list.Add( (Alfombra) pair.Value);
+            }
+
+            return list;
+        }
+
+
         private static string date(DateTime d)
         {
             if (d == DateTime.MinValue) return "-";
