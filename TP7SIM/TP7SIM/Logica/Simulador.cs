@@ -130,6 +130,7 @@ namespace TP7SIM.Logica
                 }
             }
             form.PintarCeldas();
+            Console.WriteLine("Longitud hashtable: " + e_anterior.ColaAlfombrasListas.Count);
         }
 
         private static Evento.TipoEvento DeterminarTipoEvento(Evento evActual)

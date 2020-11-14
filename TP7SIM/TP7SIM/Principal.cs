@@ -107,6 +107,7 @@ namespace TP7SIM
             );
         }
 
+    
         private static string date(DateTime d)
         {
             if (d == DateTime.MinValue) return "-";

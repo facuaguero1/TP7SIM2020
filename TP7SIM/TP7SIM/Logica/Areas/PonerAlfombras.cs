@@ -45,6 +45,7 @@ namespace TP7SIM.Logica.Areas
                         FechaProximoFinAtencion = reloj.AddHours(MySettings.TiempoPonerAlfombras / 60).AddMilliseconds(37);
                         TiempoDeAtencion = MySettings.RoundTimeSpan(0, FechaProximoFinAtencion - reloj);
                         AutoActual._Alfombra = (Alfombra)eActual.ColaAlfombrasListas[AutoActual.NroAuto];
+                        eActual.ColaAlfombrasListas.Remove(AutoActual.NroAuto);
                     }
                 /*}
                 catch (NullReferenceException)
